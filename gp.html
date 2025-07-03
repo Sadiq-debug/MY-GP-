@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GPA Calculator</title>
+  <link rel="stylesheet" href="gp.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GPA Calculator</h1>
+      <p class="subtitle">Calculate your GPA accurately and easily</p>
+    </header>
+
+    <div id="courses-container" class="courses-container">
+      <!-- Initial Course Row -->
+      <div class="course">
+        <select class="unit">
+                <option value="4">4 units</option>
+          <option value="3">3 units</option>
+          <option value="2">2 units</option>
+          <option value="1">1 unit</option>
+        
+          </option>
+        </select>
+
+        <select class="grade">
+          <option value="4">A</option>
+          <option value="3">C</option>
+          <option value="2">D</option>
+          <option value="1">E</option>
+          <option value="0">F</option>
+        </select>
+
+        <button onclick="removeCourse(this)" class="remove-btn">✖</button>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="addCourse()" class="btn secondary">Add Course</button>
+      <button onclick="calculateGPA()" class="btn primary">Generate GPA</button>
+    </div>
+
+    <h2 id="result" class="result">Your GPA: --</h2>
+  </div>
+
+  <script src="gp.js"></script>
+</body>
+</html>
